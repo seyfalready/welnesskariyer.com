@@ -322,15 +322,106 @@
     /* Mobile nav */
     .menu-toggle {
       display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 110;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle .hamburger {
+      width: 22px;
+      height: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-toggle .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--navy-900);
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .2s ease;
+    }
+
+    .menu-toggle.active .hamburger span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active .hamburger span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile overlay */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 31, 68, 0.4);
+      z-index: 99;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+      pointer-events: all;
     }
 
     @media (max-width: 920px) {
-      .nav-links {
-        display: none;
+      .menu-toggle {
+        display: flex;
       }
 
-      .nav-cta .btn-ghost {
-        display: none;
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 90px 32px 40px;
+        box-shadow: -8px 0 30px rgba(10, 31, 68, 0.15);
+        transition: right .35s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        display: flex;
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--navy-900);
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line-2);
+        width: 100%;
+        display: block;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: none;
+      }
+
+      .nav-links a:hover {
+        color: var(--blue-500);
       }
     }
 
@@ -2049,15 +2140,25 @@
       <a href="#" class="brand">
         <img src="logo.png" alt="Xaura Global" class="brand-logo">
       </a>
-      <div class="nav-links">
-        <a href="#why">Neden Xaura</a>
-        <a href="#products">Ürünler</a>
-        <a href="#how">Sistem</a>
-        <a href="#income">Kazanç Modeli</a>
-        <a href="#faq">SSS</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#why" onclick="closeMobileMenu()">Neden Xaura</a>
+        <a href="#products" onclick="closeMobileMenu()">Ürünler</a>
+        <a href="#how" onclick="closeMobileMenu()">Sistem</a>
+        <a href="#income" onclick="closeMobileMenu()">Kazanç Modeli</a>
+        <a href="#faq" onclick="closeMobileMenu()">SSS</a>
       </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü" onclick="toggleMobileMenu()">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
     </div>
   </nav>
+
+  <!-- MOBİL OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
 
   <!-- TEŞEKKÜR POPUP -->
   <div class="popup-overlay" id="thankYouPopup">
@@ -2900,6 +3001,27 @@ Xaura Landing Page üzerinden gönderildi.`;
     document.getElementById('thankYouPopup').addEventListener('click', function(e) {
       if (e.target === this) closePopup();
     });
+
+    // Mobile menü
+    function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const menuToggle = document.getElementById('menuToggle');
+      const overlay = document.getElementById('mobileOverlay');
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const menuToggle = document.getElementById('menuToggle');
+      const overlay = document.getElementById('mobileOverlay');
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
 
   </script>
 
