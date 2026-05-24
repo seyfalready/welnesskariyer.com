@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Ürünler — Xaura Global Türkiye</title>
+<meta name="description" content="Xaura Global'in bilim destekli transdermal takviye ürünleri. X-Col, X-Pain, X-Recovery, X-He, X-Night." />
+<meta name="theme-color" content="#0a1f44" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy-900: #0a1f44;
+  --navy-800: #0d2658;
+  --blue-500: #2d69e9;
+  --blue-400: #3b82f6;
+  --pearl: #f6f4ef;
+  --cream: #fbfaf6;
+  --ink: #0f172a;
+  --ink-2: #475569;
+  --ink-3: #94a3b8;
+  --line: rgba(10, 31, 68, 0.10);
+  --line-2: rgba(10, 31, 68, 0.06);
+  --display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body); font-weight: 400; color: var(--ink);
+  background: var(--cream); line-height: 1.55;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+::selection { background: var(--navy-900); color: var(--cream); }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 12px 0;
+  background: rgba(251,250,246,0.85); backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px); box-shadow: 0 1px 0 var(--line-2); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand-logo { height: 36px; width: auto; display: block; }
+.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-2); transition: color .2s ease; }
+.nav-links a:hover { color: var(--navy-900); }
+.menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; }
+.menu-toggle .hamburger { width: 22px; height: 16px; display: flex; flex-direction: column; justify-content: space-between; }
+.menu-toggle .hamburger span { display: block; width: 100%; height: 2px; background: var(--navy-900); border-radius: 2px; transition: transform .3s ease, opacity .2s ease; }
+.menu-toggle.active .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.active .hamburger span:nth-child(2) { opacity: 0; }
+.menu-toggle.active .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-overlay { position: fixed; inset: 0; background: rgba(10,31,68,0.4); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+.mobile-overlay.active { opacity: 1; pointer-events: all; }
+@media (max-width: 920px) {
+  .menu-toggle { display: flex; }
+  .nav-links { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--cream);
+    flex-direction: column; align-items: flex-start; gap: 0; padding: 90px 32px 40px;
+    box-shadow: -8px 0 30px rgba(10,31,68,0.15); transition: right .35s cubic-bezier(0.4,0,0.2,1); z-index: 100; display: flex; }
+  .nav-links.open { right: 0; }
+  .nav-links a { font-size: 17px; font-weight: 600; color: var(--navy-900); padding: 14px 0; border-bottom: 1px solid var(--line-2); width: 100%; display: block; }
+  .nav-links a:last-child { border-bottom: none; }
+}
+
+/* PAGE HERO */
+.page-hero {
+  padding: 120px 0 60px;
+  background: var(--pearl);
+  text-align: center;
+}
+.page-hero h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em;
+  color: var(--navy-900); margin-bottom: 16px;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: var(--blue-500); }
+.page-hero p { font-size: 17px; color: var(--ink-2); max-width: 55ch; margin: 0 auto; line-height: 1.6; }
+
+/* PRODUCTS GRID */
+.products-section { padding: 80px 0 100px; background: var(--cream); }
+.products-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+@media (max-width: 920px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .products-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }
+
+.product-card {
+  background: #fff; border: 1px solid var(--line-2); border-radius: 20px;
+  overflow: hidden; transition: transform .35s ease, box-shadow .35s ease;
+  display: flex; flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -20px rgba(10,31,68,0.2);
+}
+.product-card-img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-bottom: 1px solid var(--line-2);
+}
+.product-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.product-card-tag {
+  display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 5px 10px; border-radius: 999px;
+  margin-bottom: 12px; width: fit-content;
+}
+.product-card-name {
+  font-family: var(--display); font-weight: 700; font-size: 22px;
+  color: var(--navy-900); letter-spacing: -0.02em; margin-bottom: 8px;
+}
+.product-card-desc {
+  font-size: 14px; color: var(--ink-2); line-height: 1.55; margin-bottom: 20px; flex: 1;
+}
+.product-card-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; color: var(--blue-500);
+  transition: gap .2s ease;
+}
+.product-card-link:hover { gap: 12px; }
+
+/* Tag colors */
+.tag-beauty { background: rgba(219,130,150,0.12); color: #b5445a; }
+.tag-pain { background: rgba(220,38,38,0.10); color: #b91c1c; }
+.tag-recovery { background: rgba(234,147,39,0.12); color: #b45309; }
+.tag-he { background: rgba(45,105,233,0.10); color: #1d4ed8; }
+.tag-night { background: rgba(109,40,217,0.10); color: #6d28d9; }
+
+/* FOOTER */
+.footer { background: var(--navy-900); color: rgba(255,255,255,0.75); padding: 48px 0 28px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-logo { height: 28px; filter: brightness(0) invert(1); }
+.footer span { font-size: 13px; color: rgba(255,255,255,0.45); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Xaura Global" class="brand-logo"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" onclick="closeMobileMenu()">Ana Sayfa</a>
+      <a href="urunler.html" onclick="closeMobileMenu()">Ürünler</a>
+      <a href="index.html#how" onclick="closeMobileMenu()">Sistem</a>
+      <a href="index.html#income" onclick="closeMobileMenu()">Kazanç Modeli</a>
+      <a href="index.html#faq" onclick="closeMobileMenu()">SSS</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü" onclick="toggleMobileMenu()">
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Xaura <em>Ürünleri</em></h1>
+    <p>Bilim destekli, doğal içerikli transdermal takviye ürünleriyle vücudunuza en saf desteği sağlayın.</p>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="container">
+    <div class="products-grid">
+
+      <a href="urun-x-col.html" class="product-card">
+        <img class="product-card-img" src="urun-gorsel/x-col.jpg" alt="X-Col" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag tag-beauty">Beauty</span>
+          <h3 class="product-card-name">X-COL</h3>
+          <p class="product-card-desc">İçten gelen güzellik, dışa yansıyan ışıltı! Kolajen desteğiyle daha sıkı, pürüzsüz ve genç bir cilt.</p>
+          <span class="product-card-link">Detayları Gör <span>→</span></span>
+        </div>
+      </a>
+
+      <a href="urun-x-pain.html" class="product-card">
+        <img class="product-card-img" src="urun-gorsel/x-pain.jpg" alt="X Aura Pain" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag tag-pain">Pain Relief</span>
+          <h3 class="product-card-name">X AURA PAIN</h3>
+          <p class="product-card-desc">Doğal destek, güçlü formül. Kas ve eklem ağrılarına karşı doğadan gelen etkili çözüm.</p>
+          <span class="product-card-link">Detayları Gör <span>→</span></span>
+        </div>
+      </a>
+
+      <a href="urun-x-recovery.html" class="product-card">
+        <img class="product-card-img" src="urun-gorsel/x-recovery.jpg" alt="X-Recovery" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag tag-recovery">Recovery</span>
+          <h3 class="product-card-name">X-RECOVERY</h3>
+          <p class="product-card-desc">Doğadan gelen yoğun destek! Organik yağlar, turmalin ve mentol ile kasları rahatlatır, enerji verir.</p>
+          <span class="product-card-link">Detayları Gör <span>→</span></span>
+        </div>
+      </a>
+
+      <a href="urun-x-he.html" class="product-card">
+        <img class="product-card-img" src="urun-gorsel/x-he.jpg" alt="X-He" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag tag-he">For Men</span>
+          <h3 class="product-card-name">X-HE</h3>
+          <p class="product-card-desc">Erkekler için üstün performans! Doğal içerikleriyle enerji, dayanıklılık ve vitalite desteği.</p>
+          <span class="product-card-link">Detayları Gör <span>→</span></span>
+        </div>
+      </a>
+
+      <a href="urun-x-night.html" class="product-card">
+        <img class="product-card-img" src="urun-gorsel/x-night.jpg" alt="X-Night" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag tag-night">Night Care</span>
+          <h3 class="product-card-name">X-NIGHT</h3>
+          <p class="product-card-desc">Gece bakımının gücü! Uyku sırasında cildinizi yeniler, onarır ve sabaha daha dinlenmiş uyanın.</p>
+          <span class="product-card-link">Detayları Gör <span>→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <img src="logo.png" alt="Xaura Global" class="footer-logo">
+    <span>© <script>document.write(new Date().getFullYear())</script> Xaura Bağımsız İş Ortağı</span>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('menuToggle').classList.toggle('active');
+  document.getElementById('mobileOverlay').classList.toggle('active');
+}
+function closeMobileMenu() {
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('menuToggle').classList.remove('active');
+  document.getElementById('mobileOverlay').classList.remove('active');
+}
+</script>
+</body>
+</html>

@@ -836,150 +836,130 @@
     }
 
     /* ============================================
-   10. PRODUCTS
+   10. PRODUCTS SLIDER
    ============================================ */
     .products {
       background: var(--pearl);
     }
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 16px;
-      height: 720px;
-    }
-
-    @media (max-width: 920px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: auto;
-      }
-    }
-
-    .product {
+    .slider-wrapper {
       position: relative;
+      padding: 0 48px;
+    }
+
+    .slider-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      padding: 8px 0 16px;
+    }
+
+    .slider-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slide-card {
+      flex: 0 0 calc(33.333% - 16px);
+      min-width: 260px;
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid var(--line-2);
       border-radius: 20px;
-      padding: 32px;
       overflow: hidden;
+      transition: transform .35s ease, box-shadow .35s ease;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      color: var(--cream);
-      min-height: 280px;
-      transition: transform .35s ease;
-      background: var(--navy-900);
+      text-decoration: none;
+      color: inherit;
     }
 
-    .product:hover {
-      transform: translateY(-4px);
+    .slide-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px -20px rgba(10, 31, 68, 0.2);
     }
 
-    .product:hover .product-img {
-      transform: scale(1.05);
-    }
-
-    .product-img {
-      position: absolute;
-      inset: 0;
+    .slide-card img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 1;
       object-fit: cover;
-      z-index: 0;
-      transition: transform .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      border-bottom: 1px solid var(--line-2);
     }
 
-    .product::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(10, 31, 68, 0.15) 0%, rgba(10, 31, 68, 0.55) 45%, rgba(10, 31, 68, 0.95) 100%);
-      z-index: 1;
+    .slide-card-body {
+      padding: 20px 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
-    .product>*:not(.product-img) {
-      position: relative;
-      z-index: 2;
-    }
-
-    .product .num {
-      position: absolute;
-      top: 24px;
-      left: 32px;
-      font-family: var(--display);
-      font-size: 14px;
-      letter-spacing: 0.06em;
-      color: rgba(255, 255, 255, 0.7);
-      z-index: 2;
-    }
-
-    .product .tag {
-      position: absolute;
-      top: 24px;
-      right: 32px;
+    .slide-tag {
+      display: inline-block;
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      padding: 6px 12px;
+      padding: 5px 10px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      z-index: 2;
+      margin-bottom: 10px;
+      width: fit-content;
     }
 
-    .product h4 {
+    .slide-card-body h4 {
       font-family: var(--display);
       font-weight: 700;
-      font-size: clamp(24px, 2.2vw, 32px);
-      line-height: 1.1;
+      font-size: 20px;
+      color: var(--navy-900);
       letter-spacing: -0.02em;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
-    .product p {
+    .slide-card-body p {
       font-size: 14px;
-      opacity: 0.85;
-      line-height: 1.55;
-      max-width: 38ch;
+      color: var(--ink-2);
+      line-height: 1.5;
     }
 
-    .product-1 {
-      grid-column: 1;
-      grid-row: 1 / 3;
-      background: linear-gradient(140deg, #0a1f44 0%, #2d69e9 100%);
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 3;
+      transition: background .2s ease, box-shadow .2s ease, transform .15s ease;
+      box-shadow: 0 4px 12px rgba(10, 31, 68, 0.1);
+      color: var(--navy-900);
     }
 
-    .product-2 {
-      grid-column: 2;
-      grid-row: 1;
-      background: linear-gradient(140deg, #142e6b 0%, #3b82f6 100%);
+    .slider-btn:hover {
+      background: var(--navy-900);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(10, 31, 68, 0.2);
     }
 
-    .product-3 {
-      grid-column: 3;
-      grid-row: 1;
-      background: linear-gradient(140deg, #b88a4f 0%, #d4a878 100%);
-    }
-
-    .product-4 {
-      grid-column: 2;
-      grid-row: 2;
-      background: linear-gradient(140deg, #4a5d3a 0%, #7a9266 100%);
-    }
-
-    .product-5 {
-      grid-column: 3;
-      grid-row: 2;
-      background: linear-gradient(140deg, #1a1a2e 0%, #3a3a5e 100%);
-    }
+    .slider-prev { left: 0; }
+    .slider-next { right: 0; }
 
     @media (max-width: 920px) {
-      .product {
-        grid-column: 1 !important;
-        grid-row: auto !important;
-      }
+      .slide-card { flex: 0 0 calc(50% - 12px); min-width: 240px; }
+      .slider-wrapper { padding: 0 44px; }
+    }
+
+    @media (max-width: 580px) {
+      .slide-card { flex: 0 0 85%; min-width: 240px; }
+      .slider-wrapper { padding: 0; }
+      .slider-btn { display: none; }
     }
 
     /* ============================================
@@ -2142,7 +2122,7 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#why" onclick="closeMobileMenu()">Neden Xaura</a>
-        <a href="#products" onclick="closeMobileMenu()">Ürünler</a>
+        <a href="urunler.html" onclick="closeMobileMenu()">Ürünler</a>
         <a href="#how" onclick="closeMobileMenu()">Sistem</a>
         <a href="#income" onclick="closeMobileMenu()">Kazanç Modeli</a>
         <a href="#faq" onclick="closeMobileMenu()">SSS</a>
@@ -2380,68 +2360,76 @@
   </section>
 
   <!-- ============================================
-     PRODUCTS
+     PRODUCTS SLIDER
      ============================================ -->
   <section class="products" id="products">
     <div class="container">
       <div class="section-head reveal">
         <div>
           <div class="eyebrow">Ürünler</div>
-          <h2 class="section-title">5 kategoride <em>bütüncül</em> wellness.</h2>
+          <h2 class="section-title">Bilim destekli <em>transdermal</em> takviyeler.</h2>
         </div>
         <p class="lede">
-          Günlük yaşamın doğal akışı içinde özenli ve bilinçli kullanım anlayışıyla şekillenen,
-          cilt bakımından beslenmeye kadar uzanan geniş bir ürün ailesi.
+          Doğal içerikli, bilimsel formüllü ürünlerle vücudunuza en saf desteği sağlayın.
+          <a href="urunler.html" style="color: var(--blue-500); font-weight: 600;">Tümünü gör →</a>
         </p>
       </div>
 
-      <div class="product-grid">
-        <div class="product product-1 reveal">
-          <img class="product-img" onerror="this.style.display='none'"
-            src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?w=900&q=80&auto=format&fit=crop"
-            alt="Transdermal patch" loading="lazy">
-          <span class="num">01</span>
-          <span class="tag">Flagship</span>
-          <h4>Transdermal Takviyeler</h4>
-          <p>Aktif bileşenlerin kontrollü ve alternatif bir taşıyıcı sistemle vücuda ulaştırılması — dengeli salınım,
-            yüksek kullanım konforu.</p>
+      <div class="slider-wrapper reveal">
+        <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Önceki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="slider-track" id="sliderTrack">
+
+          <a href="urun-x-col.html" class="slide-card">
+            <img src="urun-gorsel/x-col.jpg" alt="X-COL" loading="lazy">
+            <div class="slide-card-body">
+              <span class="slide-tag" style="background:rgba(219,130,150,.12);color:#b5445a;">Beauty</span>
+              <h4>X-COL</h4>
+              <p>İçten gelen güzellik, dışa yansıyan ışıltı!</p>
+            </div>
+          </a>
+
+          <a href="urun-x-pain.html" class="slide-card">
+            <img src="urun-gorsel/x-pain.jpg" alt="X Aura Pain" loading="lazy">
+            <div class="slide-card-body">
+              <span class="slide-tag" style="background:rgba(220,38,38,.10);color:#b91c1c;">Pain Relief</span>
+              <h4>X AURA PAIN</h4>
+              <p>Doğal destek, güçlü formül.</p>
+            </div>
+          </a>
+
+          <a href="urun-x-recovery.html" class="slide-card">
+            <img src="urun-gorsel/x-recovery.jpg" alt="X-Recovery" loading="lazy">
+            <div class="slide-card-body">
+              <span class="slide-tag" style="background:rgba(234,147,39,.12);color:#b45309;">Recovery</span>
+              <h4>X-RECOVERY</h4>
+              <p>Doğadan gelen yoğun destek!</p>
+            </div>
+          </a>
+
+          <a href="urun-x-he.html" class="slide-card">
+            <img src="urun-gorsel/x-he.jpg" alt="X-HE" loading="lazy">
+            <div class="slide-card-body">
+              <span class="slide-tag" style="background:rgba(45,105,233,.10);color:#1d4ed8;">For Men</span>
+              <h4>X-HE</h4>
+              <p>Erkekler için üstün performans!</p>
+            </div>
+          </a>
+
+          <a href="urun-x-night.html" class="slide-card">
+            <img src="urun-gorsel/x-night.jpg" alt="X-Night" loading="lazy">
+            <div class="slide-card-body">
+              <span class="slide-tag" style="background:rgba(109,40,217,.10);color:#6d28d9;">Night Care</span>
+              <h4>X-NIGHT</h4>
+              <p>Gece bakımının gücü!</p>
+            </div>
+          </a>
+
         </div>
-        <div class="product product-2 reveal">
-          <img class="product-img" onerror="this.style.display='none'"
-            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=700&q=80&auto=format&fit=crop"
-            alt="Dermokozmetik ürünler" loading="lazy">
-          <span class="num">02</span>
-          <span class="tag">Beauty</span>
-          <h4>Dermokozmetik</h4>
-          <p>Cilt bariyerini koruyan, uzun vadeli konforu odağa alan formülasyonlar.</p>
-        </div>
-        <div class="product product-3 reveal">
-          <img class="product-img" onerror="this.style.display='none'"
-            src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80&auto=format&fit=crop"
-            alt="Reishi kahve" loading="lazy">
-          <span class="num">03</span>
-          <span class="tag">Daily</span>
-          <h4>Reishi Kahveler</h4>
-          <p>Günlük rutini destekleyen, fonksiyonel içeriklerle dengelenmiş kahve serisi.</p>
-        </div>
-        <div class="product product-4 reveal">
-          <img class="product-img" onerror="this.style.display='none'"
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=80&auto=format&fit=crop"
-            alt="Form destek" loading="lazy">
-          <span class="num">04</span>
-          <span class="tag">Form</span>
-          <h4>Form &amp; Destek Ürünleri</h4>
-          <p>Sürdürülebilir, güvenli ve dengeli bir yaşam yaklaşımıyla hazırlanmış serisi.</p>
-        </div>
-        <div class="product product-5 reveal">
-          <img class="product-img" onerror="this.style.display='none'"
-            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=80&auto=format&fit=crop"
-            alt="Kişisel bakım" loading="lazy">
-          <span class="num">05</span>
-          <span class="tag">Care</span>
-          <h4>Kişisel Bakım</h4>
-          <p>İçerik güvenliği, cilt uyumu ve kullanım konforu odaklı günlük bakım.</p>
-        </div>
+        <button class="slider-btn slider-next" id="sliderNext" aria-label="Sonraki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -3023,6 +3011,20 @@ Xaura Landing Page üzerinden gönderildi.`;
       menuToggle.classList.remove('active');
       overlay.classList.remove('active');
       document.body.style.overflow = '';
+    }
+
+    // Product Slider
+    const sliderTrack = document.getElementById('sliderTrack');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    if (sliderTrack && prevBtn && nextBtn) {
+      const scrollAmount = 320;
+      prevBtn.addEventListener('click', () => {
+        sliderTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        sliderTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
     }
 
   </script>
