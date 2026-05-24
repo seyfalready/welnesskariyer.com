@@ -1,0 +1,1951 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Xaura Global Türkiye — Wellness Ekonomisinin Yeni Nesil Ortakları</title>
+<meta name="description" content="Bilim destekli wellness ürünleri ve şeffaf kazanç planıyla 18 ülkede 165.000+ distribütöre ulaşan Xaura Global'in Türkiye yapılanmasına katılın." />
+<meta name="theme-color" content="#0a1f44" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Xaura Global Türkiye — Bayilik & İş Ortaklığı Fırsatı" />
+<meta property="og:description" content="18 ülke. 70+ ülkede ürün erişimi. 165.000+ aktif distribütör. Sıradan bir iş değil — wellness ekonomisinde yer alın." />
+<meta property="og:type" content="website" />
+
+<!-- Inter — single font system -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   1. DESIGN TOKENS
+   ============================================ */
+:root {
+  /* Brand palette — Xaura navy + accent blue + warm pearl */
+  --navy-900: #0a1f44;
+  --navy-800: #0d2658;
+  --navy-700: #142e6b;
+  --blue-500: #2d69e9;
+  --blue-400: #3b82f6;
+  --blue-100: #dbe7ff;
+  --pearl:    #f6f4ef;
+  --pearl-2:  #ede9e0;
+  --cream:    #fbfaf6;
+  --gold:     #b88a4f;
+  --ink:      #0f172a;
+  --ink-2:    #475569;
+  --ink-3:    #94a3b8;
+  --line:     rgba(10, 31, 68, 0.10);
+  --line-2:   rgba(10, 31, 68, 0.06);
+
+  /* Type — Inter everywhere */
+  --display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body:    "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing rhythm */
+  --section-y: clamp(72px, 9vw, 140px);
+  --container: 1200px;
+}
+
+/* ============================================
+   2. RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--body);
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+input, textarea, select { font: inherit; color: inherit; }
+
+/* Selection */
+::selection { background: var(--navy-900); color: var(--cream); }
+
+/* Container */
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* ============================================
+   3. TYPOGRAPHY UTILITIES
+   ============================================ */
+.eyebrow {
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.eyebrow::before {
+  content: ""; width: 24px; height: 1px; background: var(--blue-500);
+}
+
+.h-display {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--navy-900);
+}
+.h-display em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--blue-500);
+}
+
+.section-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--navy-900);
+}
+.section-title em { font-style: italic; font-weight: 300; color: var(--blue-500); }
+
+.lede {
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  transition: transform .2s ease, box-shadow .25s ease, background .2s ease, color .2s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--navy-900);
+  color: var(--cream);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 24px -10px rgba(10,31,68,0.45);
+}
+.btn-primary:hover {
+  background: var(--blue-500);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px -10px rgba(45,105,233,0.55);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--navy-900);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover {
+  background: var(--navy-900);
+  color: var(--cream);
+  border-color: var(--navy-900);
+}
+.btn-light {
+  background: var(--cream);
+  color: var(--navy-900);
+}
+.btn-light:hover { background: #fff; transform: translateY(-1px); }
+.btn .arrow { transition: transform .2s ease; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ============================================
+   5. NAV
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 0;
+  transition: padding .25s ease, background .25s ease, backdrop-filter .25s ease, box-shadow .25s ease;
+}
+.nav.scrolled {
+  padding: 12px 0;
+  background: rgba(251,250,246,0.85);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  box-shadow: 0 1px 0 var(--line-2);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.brand {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+  display: inline-flex; align-items: baseline; gap: 6px;
+}
+.brand .x {
+  font-style: italic;
+  color: var(--blue-500);
+  font-weight: 300;
+}
+.brand .tag {
+  font-family: var(--body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-left: 6px;
+}
+.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--ink-2);
+  transition: color .2s ease;
+}
+.nav-links a:hover { color: var(--navy-900); }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+.nav-cta .btn { padding: 12px 20px; font-size: 14px; }
+
+/* Mobile nav */
+.menu-toggle { display: none; }
+@media (max-width: 920px) {
+  .nav-links { display: none; }
+  .nav-cta .btn-ghost { display: none; }
+}
+
+/* ============================================
+   6. HERO
+   ============================================ */
+.hero {
+  position: relative;
+  padding: 160px 0 100px;
+  background: var(--cream);
+  overflow: hidden;
+}
+.hero::before {
+  /* Soft mesh background */
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 50% at 85% 20%, rgba(45,105,233,0.10), transparent 60%),
+    radial-gradient(50% 60% at 10% 85%, rgba(184,138,79,0.08), transparent 60%);
+  pointer-events: none;
+}
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: start;
+}
+.hero-right {
+  position: sticky;
+  top: 120px;
+}
+@media (max-width: 920px) {
+  .hero { padding: 130px 0 70px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right { position: static; }
+}
+.hero-eyebrow { margin-bottom: 28px; }
+.hero h1 {
+  font-size: clamp(44px, 6.2vw, 84px);
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--navy-900);
+  margin-bottom: 28px;
+}
+.hero h1 em {
+  font-style: italic; font-weight: 300; color: var(--blue-500);
+}
+.hero h1 .underline {
+  position: relative;
+  display: inline-block;
+}
+.hero h1 .underline::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 4px; height: 6px;
+  background: rgba(184,138,79,0.35);
+  z-index: -1;
+  border-radius: 2px;
+}
+.hero-sub {
+  font-size: clamp(16px, 1.3vw, 19px);
+  color: var(--ink-2);
+  line-height: 1.6;
+  max-width: 56ch;
+  margin-bottom: 32px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.hero-actions .meta {
+  font-size: 13px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 8px;
+  margin-left: 8px;
+}
+.hero-actions .meta::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.18);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(34,197,94,0.18); }
+  50% { box-shadow: 0 0 0 8px rgba(34,197,94,0.05); }
+}
+
+/* Hero visual card */
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-800) 50%, var(--blue-500) 100%);
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px -20px rgba(10,31,68,0.4),
+    0 8px 20px -8px rgba(10,31,68,0.2);
+}
+.hero-visual-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-visual-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(10,31,68,0.2) 0%, rgba(10,31,68,0.85) 60%, rgba(10,31,68,0.95) 100%),
+    radial-gradient(circle at 20% 80%, rgba(45,105,233,0.4), transparent 50%);
+}
+.hero-visual-content {
+  position: absolute; inset: 0;
+  padding: 36px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  color: var(--cream);
+  z-index: 2;
+}
+.hv-tag {
+  align-self: flex-start;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+.hv-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.hv-stat .num {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1; letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+.hv-stat .num em { font-style: italic; font-weight: 300; opacity: 0.85; }
+.hv-stat .lbl {
+  font-size: 12px; letter-spacing: 0.05em; opacity: 0.75; line-height: 1.4;
+}
+.hv-badge {
+  position: absolute; top: -20px; right: -20px;
+  z-index: 3;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: var(--pearl);
+  color: var(--navy-900);
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  font-family: var(--body);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  box-shadow: 0 12px 30px -8px rgba(10,31,68,0.4);
+  animation: float 6s ease-in-out infinite;
+}
+.hv-badge strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--blue-500);
+  margin-bottom: 2px;
+  letter-spacing: -0.02em;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+/* ============================================
+   7. TRUST STRIP
+   ============================================ */
+.trust {
+  background: var(--navy-900);
+  color: var(--cream);
+  padding: 28px 0;
+  position: relative;
+}
+.trust-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+.trust-item {
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 12px;
+}
+.trust-item:last-child { border-right: none; }
+.trust-item .num {
+  font-family: var(--display);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.trust-item .num em { font-style: italic; color: var(--blue-400); font-weight: 300; }
+.trust-item .lbl {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; opacity: 0.7;
+}
+@media (max-width: 720px) {
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .trust-item { border-right: none; }
+  .trust-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.12); }
+}
+
+/* ============================================
+   8. SECTION BASE
+   ============================================ */
+section { padding: var(--section-y) 0; }
+.section-head {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+@media (max-width: 820px) {
+  .section-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+}
+
+/* ============================================
+   9. WHY XAURA
+   ============================================ */
+.why { background: var(--cream); }
+.why-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 820px) { .why-cards { grid-template-columns: 1fr; } }
+
+.why-card {
+  background: #fff;
+  border: 1px solid var(--line-2);
+  padding: 36px;
+  border-radius: 20px;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -20px rgba(10,31,68,0.18);
+  border-color: var(--line);
+}
+.why-card .ico {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--pearl);
+  border-radius: 14px;
+  margin-bottom: 24px;
+  color: var(--navy-900);
+}
+.why-card h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+  margin-bottom: 12px;
+}
+.why-card p {
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ============================================
+   10. PRODUCTS
+   ============================================ */
+.products { background: var(--pearl); }
+.product-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: 720px;
+}
+@media (max-width: 920px) {
+  .product-grid { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
+}
+.product {
+  position: relative;
+  border-radius: 20px;
+  padding: 32px;
+  overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  color: var(--cream);
+  min-height: 280px;
+  transition: transform .35s ease;
+  background: var(--navy-900);
+}
+.product:hover { transform: translateY(-4px); }
+.product:hover .product-img { transform: scale(1.05); }
+.product-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform .8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.product::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,31,68,0.15) 0%, rgba(10,31,68,0.55) 45%, rgba(10,31,68,0.95) 100%);
+  z-index: 1;
+}
+.product > *:not(.product-img) { position: relative; z-index: 2; }
+.product .num {
+  position: absolute; top: 24px; left: 32px;
+  font-family: var(--display);
+  font-size: 14px; letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.7);
+  z-index: 2;
+}
+.product .tag {
+  position: absolute; top: 24px; right: 32px;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+.product h4 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.product p {
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.55;
+  max-width: 38ch;
+}
+.product-1 {
+  grid-column: 1; grid-row: 1 / 3;
+  background: linear-gradient(140deg, #0a1f44 0%, #2d69e9 100%);
+}
+.product-2 {
+  grid-column: 2; grid-row: 1;
+  background: linear-gradient(140deg, #142e6b 0%, #3b82f6 100%);
+}
+.product-3 {
+  grid-column: 3; grid-row: 1;
+  background: linear-gradient(140deg, #b88a4f 0%, #d4a878 100%);
+}
+.product-4 {
+  grid-column: 2; grid-row: 2;
+  background: linear-gradient(140deg, #4a5d3a 0%, #7a9266 100%);
+}
+.product-5 {
+  grid-column: 3; grid-row: 2;
+  background: linear-gradient(140deg, #1a1a2e 0%, #3a3a5e 100%);
+}
+@media (max-width: 920px) {
+  .product { grid-column: 1 !important; grid-row: auto !important; }
+}
+
+/* ============================================
+   11. LIFESTYLE BAND
+   ============================================ */
+.lifestyle { background: var(--cream); padding: calc(var(--section-y) * 0.5) 0; }
+.lifestyle-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 460px;
+  display: flex; align-items: stretch;
+  box-shadow: 0 30px 80px -30px rgba(10,31,68,0.35);
+}
+.lifestyle-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.lifestyle-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(95deg, rgba(10,31,68,0.92) 0%, rgba(10,31,68,0.78) 45%, rgba(10,31,68,0.4) 100%);
+}
+.lifestyle-content {
+  position: relative; z-index: 2;
+  padding: clamp(40px, 5vw, 72px);
+  max-width: 640px;
+  color: var(--cream);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.lifestyle-content .eyebrow::before { background: var(--blue-400); }
+.lifestyle-content h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 18px 0 18px;
+  color: var(--cream);
+}
+.lifestyle-content h3 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--blue-400);
+}
+.lifestyle-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  max-width: 50ch;
+  margin-bottom: 32px;
+}
+.lifestyle-stats {
+  display: flex; gap: 32px; flex-wrap: wrap;
+}
+.ls-stat {
+  border-left: 1px solid rgba(255,255,255,0.2);
+  padding-left: 16px;
+}
+.ls-num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+.ls-lbl {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+@media (max-width: 720px) {
+  .lifestyle-overlay {
+    background: linear-gradient(180deg, rgba(10,31,68,0.5) 0%, rgba(10,31,68,0.95) 60%);
+  }
+  .lifestyle-content { padding: 40px 28px; }
+}
+.how { background: var(--cream); }
+.steps {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  position: relative;
+}
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 36px; left: 8%; right: 8%; height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--line) 20%, var(--line) 80%, transparent 100%);
+  z-index: 0;
+}
+@media (max-width: 820px) {
+  .steps { grid-template-columns: 1fr; gap: 32px; }
+  .steps::before { display: none; }
+}
+.step { position: relative; z-index: 1; }
+.step-num {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin-bottom: 24px;
+  transition: all .3s ease;
+  letter-spacing: -0.02em;
+}
+.step:hover .step-num {
+  background: var(--navy-900); color: var(--cream); border-color: var(--navy-900);
+  transform: scale(1.05);
+}
+.step h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.step p { font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+
+/* ============================================
+   12. INCOME STREAMS
+   ============================================ */
+.income {
+  background: var(--navy-900);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.income::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(40% 50% at 80% 30%, rgba(45,105,233,0.25), transparent 60%),
+    radial-gradient(50% 60% at 10% 80%, rgba(184,138,79,0.12), transparent 60%);
+  pointer-events: none;
+}
+.income > .container { position: relative; z-index: 2; }
+.income .section-title { color: var(--cream); }
+.income .section-title em { color: var(--blue-400); }
+.income .lede { color: rgba(255,255,255,0.65); }
+.income .eyebrow { color: var(--blue-400); }
+.income .eyebrow::before { background: var(--blue-400); }
+
+.income-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  overflow: hidden;
+}
+@media (max-width: 820px) { .income-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .income-grid { grid-template-columns: 1fr; } }
+.income-item {
+  padding: 32px 28px;
+  background: var(--navy-900);
+  transition: background .25s ease;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.income-item:hover { background: var(--navy-800); }
+.income-item .ix-num {
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--blue-400);
+  margin-bottom: 8px;
+}
+.income-item h5 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.income-item p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.55;
+}
+
+.income-note {
+  margin-top: 40px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* ============================================
+   13. CAREER
+   ============================================ */
+.career { background: var(--cream); }
+.career-track {
+  display: flex; gap: 12px; overflow-x: auto;
+  padding: 12px 0 32px;
+  scrollbar-width: thin;
+}
+.career-track::-webkit-scrollbar { height: 6px; }
+.career-track::-webkit-scrollbar-track { background: var(--line-2); border-radius: 3px; }
+.career-track::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+
+.rank {
+  flex-shrink: 0;
+  min-width: 140px;
+  padding: 24px 20px;
+  border-radius: 14px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--line-2);
+  transition: transform .3s ease;
+}
+.rank:hover { transform: translateY(-4px); }
+.rank-name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.rank-cv {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.rank-1 { background: linear-gradient(140deg, #e8f1ff, #c9deff); color: #1e3a8a; }
+.rank-2 { background: linear-gradient(140deg, #f5f0e1, #e8dcc0); color: #6b5b3e; }
+.rank-3 { background: linear-gradient(140deg, #dbe7ff, #a8c5ff); color: #1e3a8a; }
+.rank-4 { background: linear-gradient(140deg, #fde2e2, #f1a6a6); color: #7f1d1d; }
+.rank-5 { background: linear-gradient(140deg, #1e3a3a, #0f4d4d); color: #fff; }
+.rank-6 { background: linear-gradient(140deg, #0a1f44, #142e6b); color: #fff; }
+.rank-7 { background: linear-gradient(140deg, #1e2a78, #3b3fa0); color: #fff; }
+.rank-8 { background: linear-gradient(140deg, #7f1d1d, #b91c1c); color: #fff; }
+.rank-9 { background: linear-gradient(140deg, #0a0a0a, #1f2937); color: #fff; }
+.rank-10 { background: linear-gradient(140deg, #7c2d12, #c2410c); color: #fff; }
+.rank-11 { background: linear-gradient(140deg, #b88a4f, #d4a878); color: #fff; }
+.rank-cv { color: rgba(255,255,255,0.65); }
+.rank-1 .rank-cv, .rank-2 .rank-cv, .rank-3 .rank-cv, .rank-4 .rank-cv { color: rgba(0,0,0,0.5); }
+
+/* ============================================
+   14. CERTIFICATIONS
+   ============================================ */
+.certs { background: var(--pearl); }
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+@media (max-width: 820px) { .certs-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { .certs-grid { grid-template-columns: repeat(2, 1fr); } }
+.cert {
+  padding: 28px 16px;
+  background: #fff;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid var(--line-2);
+  transition: transform .25s ease;
+}
+.cert:hover { transform: translateY(-3px); }
+.cert-name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.cert-desc {
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================
+   15. LEAD FORM
+   ============================================ */
+.lead {
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.lead-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: center;
+}
+@media (max-width: 920px) {
+  .lead-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+.lead-left .section-title { margin-bottom: 24px; }
+.lead-left .lede { margin-bottom: 32px; }
+.lead-bullets { list-style: none; display: grid; gap: 14px; }
+.lead-bullets li {
+  font-size: 15px; color: var(--ink-2); line-height: 1.5;
+  display: flex; align-items: start; gap: 12px;
+}
+.lead-bullets li::before {
+  content: "→"; color: var(--blue-500); font-weight: 700; flex-shrink: 0;
+}
+
+.form-card {
+  background: #fff;
+  border: 1px solid var(--line-2);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 24px 60px -24px rgba(10,31,68,0.18);
+}
+@media (max-width: 520px) { .form-card { padding: 28px; } }
+
+/* Hero-embedded form variant — slightly more compact */
+.form-card.form-hero {
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px -20px rgba(10,31,68,0.18);
+}
+@media (max-width: 520px) {
+  .form-card.form-hero { padding: 24px; }
+}
+
+.form-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.form-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #15803d;
+  background: rgba(34, 197, 94, 0.10);
+  padding: 5px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.form-status-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.18);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.18); }
+  50% { box-shadow: 0 0 0 6px rgba(34,197,94,0.04); }
+}
+@media (max-width: 480px) {
+  .form-head { flex-direction: column; align-items: stretch; }
+}
+.form-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--navy-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.form-sub {
+  font-size: 14px; color: var(--ink-2); margin-bottom: 28px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+.form-field { margin-bottom: 14px; }
+.form-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+}
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--navy-900);
+  transition: border-color .2s ease, background .2s ease;
+  font-family: var(--body);
+}
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--blue-500);
+  background: #fff;
+}
+.form-checkbox {
+  display: flex; align-items: start; gap: 12px;
+  margin: 8px 0 24px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.form-checkbox input {
+  width: 18px; height: 18px;
+  margin-top: 2px;
+  accent-color: var(--blue-500);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.form-checkbox a {
+  color: var(--blue-500); text-decoration: underline; text-underline-offset: 2px;
+}
+.form-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--navy-900);
+  color: var(--cream);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  transition: background .2s ease, transform .15s ease;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.form-submit:hover { background: var(--blue-500); transform: translateY(-1px); }
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.form-status {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+/* ============================================
+   16. FAQ
+   ============================================ */
+.faq { background: var(--pearl); }
+.faq-list { max-width: 820px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+  cursor: pointer;
+}
+.faq-item:first-child { border-top: 1px solid var(--line); }
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--navy-900);
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  transition: color .2s ease;
+}
+.faq-q .plus {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: transform .3s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  color: var(--navy-900);
+  font-size: 16px; font-weight: 300;
+}
+.faq-item.open .faq-q .plus {
+  background: var(--navy-900);
+  color: var(--cream);
+  border-color: var(--navy-900);
+  transform: rotate(45deg);
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1), padding-top .4s ease;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding-top: 14px;
+}
+.faq-a-inner { padding-right: 50px; }
+
+/* ============================================
+   17. FOOTER
+   ============================================ */
+.footer {
+  background: var(--navy-900);
+  color: rgba(255,255,255,0.75);
+  padding: 72px 0 32px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+@media (max-width: 820px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+.footer-brand {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 16px;
+  display: inline-flex; align-items: baseline; gap: 6px;
+  letter-spacing: -0.02em;
+}
+.footer-brand .x { font-style: italic; color: var(--blue-400); font-weight: 300; }
+.footer p { font-size: 13px; line-height: 1.6; max-width: 36ch; }
+.footer h6 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 18px;
+}
+.footer ul { list-style: none; display: grid; gap: 10px; }
+.footer ul a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  transition: color .2s ease;
+}
+.footer ul a:hover { color: var(--cream); }
+.footer-disclaimer {
+  border-top: 1px solid rgba(255,255,255,0.10);
+  padding-top: 24px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+}
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+  margin-top: 24px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ============================================
+   18. FLOATING WHATSAPP BUTTON
+   ============================================ */
+.wa-float {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 24px -4px rgba(37,211,102,0.5);
+  z-index: 50;
+  transition: transform .2s ease;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 30px; height: 30px; }
+
+/* ============================================
+   19. REVEAL ANIMATIONS
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero reveal */
+.hero-eyebrow, .hero h1, .hero-sub, .form-hero {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroIn 0.9s ease forwards;
+}
+.hero h1 { animation-delay: 0.08s; }
+.hero-sub { animation-delay: 0.18s; }
+.form-hero { animation-delay: 0.3s; }
+.hero-visual { animation: heroIn 1s ease 0.4s forwards; opacity: 0; transform: translateY(16px); }
+
+@keyframes heroIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAV
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="brand">
+      <span class="x">x</span>aura
+      <span class="tag">Global Türkiye</span>
+    </a>
+    <div class="nav-links">
+      <a href="#why">Neden Xaura</a>
+      <a href="#products">Ürünler</a>
+      <a href="#how">Sistem</a>
+      <a href="#income">Kazanç Modeli</a>
+      <a href="#faq">SSS</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#hero" class="btn btn-primary">Sunumu Al <span class="arrow">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow eyebrow">Bayilik &amp; İş Ortaklığı Fırsatı</div>
+      <h1>
+        Xaura Global ile kendi <em>işinizi</em> kurarak gelirinizi artırmaya hazır mısınız?
+      </h1>
+      <p class="hero-sub">
+        Yeni nesil teknolojiler kullanan wellness odaklı Xaura ürünlerinin distribütörü olarak
+        kendi işinizi kurabilirsiniz.
+      </p>
+
+      <form class="form-card form-hero" id="leadForm" onsubmit="return submitLead(event)">
+        <div class="form-head">
+          <h3 class="form-title">Ücretsiz sunumunuzu alın</h3>
+          <span class="form-status-pill">
+            <span class="dot"></span> Şu an başvuru kabul ediliyor
+          </span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">Ad</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Adınız">
+          </div>
+          <div class="form-field">
+            <label for="lastName">Soyad</label>
+            <input type="text" id="lastName" name="lastName" required placeholder="Soyadınız">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" required placeholder="0 5xx xxx xx xx" pattern="[0-9 +()]{10,}">
+          </div>
+          <div class="form-field">
+            <label for="city">Şehir</label>
+            <input type="text" id="city" name="city" required placeholder="İstanbul, Ankara…">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="goal">Sizi en çok ne ilgilendiriyor?</label>
+          <select id="goal" name="goal" required>
+            <option value="">Seçin…</option>
+            <option value="Ek gelir">Ek gelir oluşturmak</option>
+            <option value="Tam zamanlı iş">Tam zamanlı bir iş kurmak</option>
+            <option value="Ürünler">Yalnızca ürünleri kullanmak</option>
+            <option value="Genel bilgi">Genel bilgi almak istiyorum</option>
+          </select>
+        </div>
+
+        <label class="form-checkbox">
+          <input type="checkbox" id="kvkk" required>
+          <span>
+            <a href="#kvkk" onclick="alert('KVKK Aydınlatma metnini buraya ekleyin.'); return false;">KVKK Aydınlatma Metni</a>'ni okudum;
+            tarafımla iletişime geçilmesi amacıyla kişisel verilerimin işlenmesine açık rıza veriyorum.
+          </span>
+        </label>
+
+        <button type="submit" class="form-submit" id="submitBtn">
+          Sunumu Talep Et
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </button>
+
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-visual">
+        <img class="hero-visual-img" onerror="this.style.display='none'"
+             src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=1000&q=80&auto=format&fit=crop"
+             alt="Wellness lifestyle"
+             loading="eager">
+        <div class="hero-visual-overlay"></div>
+
+        <div class="hv-badge">
+          <strong>%50</strong>
+          Perakende<br>Satış Kârı
+        </div>
+
+        <div class="hero-visual-content">
+          <span class="hv-tag">Global Wellness</span>
+          <div class="hv-stats">
+            <div class="hv-stat">
+              <div class="num">165K<em>+</em></div>
+              <div class="lbl">Aktif Distribütör</div>
+            </div>
+            <div class="hv-stat">
+              <div class="num">18<em>+</em></div>
+              <div class="lbl">Ülkede Ofis &amp; Lojistik</div>
+            </div>
+            <div class="hv-stat">
+              <div class="num">70<em>+</em></div>
+              <div class="lbl">Ülkede Ürün Erişimi</div>
+            </div>
+            <div class="hv-stat">
+              <div class="num">9</div>
+              <div class="lbl">Farklı Kazanç Kalemi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TRUST STRIP
+     ============================================ -->
+<div class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="num">ISO<em>9001</em></div>
+        <div class="lbl">Kalite Yönetim</div>
+      </div>
+      <div class="trust-item">
+        <div class="num">Helal<em>&amp;</em>Vegan</div>
+        <div class="lbl">Sertifikalı</div>
+      </div>
+      <div class="trust-item">
+        <div class="num">FDA</div>
+        <div class="lbl">Üretim Tesisi Kayıtlı</div>
+      </div>
+      <div class="trust-item">
+        <div class="num">Kore<em>·</em>Türkiye</div>
+        <div class="lbl">Üretim &amp; Operasyon</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     WHY XAURA
+     ============================================ -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Neden Xaura</div>
+        <h2 class="section-title">Sıradan bir <em>fırsat</em> değil.</h2>
+      </div>
+      <p class="lede">
+        Xaura Global, yalnızca bir ürün firması değil; eğitim, etkinlik ve organizasyon yapısıyla bütüncül bir
+        wellness ekonomisi sunan, uluslararası standartlara uygun kurumsal bir yapıdır.
+      </p>
+    </div>
+
+    <div class="why-cards">
+      <div class="why-card reveal">
+        <div class="ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 12l2 2 4-4"/>
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
+        </div>
+        <h3>Bilim destekli ürünler</h3>
+        <p>
+          Kore'deki tesislerde üretilen transdermal takviyeler, dermokozmetik seriler, fonksiyonel kahveler ve
+          form destek ürünleri. Helal, Vegan, ISO ve FDA tesis kayıtlarıyla belgelenmiş.
+        </p>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
+          </svg>
+        </div>
+        <h3>Küresel altyapı</h3>
+        <p>
+          18 ülkede ofis, depo ve lojistik yapılanması. 70'ten fazla ülkede aktif ürün erişimi.
+          Türkiye'den başlayıp tek bir ekosistem üzerinden tüm bu ülkelerde iş kurabilirsiniz.
+        </p>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="ico">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 3v18h18"/>
+            <path d="M7 14l4-4 4 4 5-6"/>
+          </svg>
+        </div>
+        <h3>Şeffaf kazanç planı</h3>
+        <p>
+          9 farklı kazanç kalemi: perakende kârı, binary takım primi, kariyer primi, matching liderlik primi,
+          XP bonus, haftalık havuz ve daha fazlası. Tüm prim hesapları sistem üzerinden takip edilebilir.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PRODUCTS
+     ============================================ -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Ürünler</div>
+        <h2 class="section-title">5 kategoride <em>bütüncül</em> wellness.</h2>
+      </div>
+      <p class="lede">
+        Günlük yaşamın doğal akışı içinde özenli ve bilinçli kullanım anlayışıyla şekillenen,
+        cilt bakımından beslenmeye kadar uzanan geniş bir ürün ailesi.
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product product-1 reveal">
+        <img class="product-img" onerror="this.style.display='none'"
+             src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?w=900&q=80&auto=format&fit=crop"
+             alt="Transdermal patch" loading="lazy">
+        <span class="num">01</span>
+        <span class="tag">Flagship</span>
+        <h4>Transdermal Takviyeler</h4>
+        <p>Aktif bileşenlerin kontrollü ve alternatif bir taşıyıcı sistemle vücuda ulaştırılması — dengeli salınım, yüksek kullanım konforu.</p>
+      </div>
+      <div class="product product-2 reveal">
+        <img class="product-img" onerror="this.style.display='none'"
+             src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=700&q=80&auto=format&fit=crop"
+             alt="Dermokozmetik ürünler" loading="lazy">
+        <span class="num">02</span>
+        <span class="tag">Beauty</span>
+        <h4>Dermokozmetik</h4>
+        <p>Cilt bariyerini koruyan, uzun vadeli konforu odağa alan formülasyonlar.</p>
+      </div>
+      <div class="product product-3 reveal">
+        <img class="product-img" onerror="this.style.display='none'"
+             src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80&auto=format&fit=crop"
+             alt="Reishi kahve" loading="lazy">
+        <span class="num">03</span>
+        <span class="tag">Daily</span>
+        <h4>Reishi Kahveler</h4>
+        <p>Günlük rutini destekleyen, fonksiyonel içeriklerle dengelenmiş kahve serisi.</p>
+      </div>
+      <div class="product product-4 reveal">
+        <img class="product-img" onerror="this.style.display='none'"
+             src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=80&auto=format&fit=crop"
+             alt="Form destek" loading="lazy">
+        <span class="num">04</span>
+        <span class="tag">Form</span>
+        <h4>Form &amp; Destek Ürünleri</h4>
+        <p>Sürdürülebilir, güvenli ve dengeli bir yaşam yaklaşımıyla hazırlanmış serisi.</p>
+      </div>
+      <div class="product product-5 reveal">
+        <img class="product-img" onerror="this.style.display='none'"
+             src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=80&auto=format&fit=crop"
+             alt="Kişisel bakım" loading="lazy">
+        <span class="num">05</span>
+        <span class="tag">Care</span>
+        <h4>Kişisel Bakım</h4>
+        <p>İçerik güvenliği, cilt uyumu ve kullanım konforu odaklı günlük bakım.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     LIFESTYLE BAND
+     ============================================ -->
+<section class="lifestyle">
+  <div class="container">
+    <div class="lifestyle-card reveal">
+      <img class="lifestyle-img" onerror="this.style.display='none'"
+           src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=80&auto=format&fit=crop"
+           alt="Profesyonel iş ortakları" loading="lazy">
+      <div class="lifestyle-overlay"></div>
+      <div class="lifestyle-content">
+        <div class="eyebrow" style="color: var(--blue-400);">İş ortaklığı</div>
+        <h3>Sıradan bir satıcı değil, küresel bir <em>ekosistemin</em> parçası olun.</h3>
+        <p>
+          Xaura Global'in 18 ülkeye yayılmış altyapısı, mentorluk programı ve dijital iş araçları —
+          hepsi Türkiye'den dahil olabileceğiniz tek bir ekosistemde.
+        </p>
+        <div class="lifestyle-stats">
+          <div class="ls-stat">
+            <div class="ls-num">7+</div>
+            <div class="ls-lbl">Yıllık operasyon</div>
+          </div>
+          <div class="ls-stat">
+            <div class="ls-num">52</div>
+            <div class="ls-lbl">Hafta puan birikimi</div>
+          </div>
+          <div class="ls-stat">
+            <div class="ls-num">∞</div>
+            <div class="ls-lbl">Derinlik bonusu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Sistem nasıl çalışıyor?</div>
+        <h2 class="section-title">4 adımda <em>başlayın.</em></h2>
+      </div>
+      <p class="lede">
+        Bilgi edinmekten kazanmaya kadar geçen yolu olabildiğince sade tuttuk.
+        Her aşamada size eşlik edecek bir ekip ve sistem var.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h4>Sunumu inceleyin</h4>
+        <p>Formu doldurduktan sonra size detaylı sunum, ürün katalogu ve kazanç planını ileteceğiz. İncelemek için zaman ayırın.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h4>Sorularınızı sorun</h4>
+        <p>Bire bir görüşme yapıyoruz. Sistemi, ürünleri ve kazanç modelini somut örneklerle anlatıyoruz — baskı yok.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h4>Başlangıç setinizi seçin</h4>
+        <p>Classic, Elite, Premium Lite ya da Premium — bütçenize ve hedefinize uygun setle bayiliğe başlayın.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h4>Sistemle büyütün</h4>
+        <p>Eğitim materyalleri, mentorluk ve dijital araçlarla kendi ekibinizi kurmaya ve gelirinizi katlamaya başlayın.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     INCOME STREAMS
+     ============================================ -->
+<section class="income" id="income">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Kazanç Modeli</div>
+        <h2 class="section-title">9 farklı <em>gelir kalemi.</em></h2>
+      </div>
+      <p class="lede">
+        Sadece tek bir kanaldan değil; perakende satıştan ekip büyütmeye, liderlikten haftalık havuza kadar
+        birden fazla kalemden gelir oluşturabileceğiniz çok katmanlı bir sistem.
+      </p>
+    </div>
+
+    <div class="income-grid">
+      <div class="income-item">
+        <div class="ix-num">01</div>
+        <h5>Referans Primi</h5>
+        <p>Sisteme dahil ettiğiniz yeni iş ortaklarından doğan referans bazlı prim.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">02</div>
+        <h5>Perakende Satış Primi</h5>
+        <p>Bayi alış fiyatı ile perakende fiyatı arasındaki %50'ye varan kâr marjı.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">03</div>
+        <h5>Binary (Takım) Primi</h5>
+        <p>Sağ ve sol takım cirosu üzerinden seviyenize göre %6'dan %10'a varan haftalık prim.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">04</div>
+        <h5>Kariyer Primi</h5>
+        <p>Sapphire kariyerinden Crown Ambassador'a kadar her ilk ulaşımda tek seferlik prim.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">05</div>
+        <h5>Kariyer Yenileme Primi</h5>
+        <p>Bulunduğunuz kariyer seviyesini koruduğunuzda devam eden ek prim.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">06</div>
+        <h5>Matching (Liderlik) Primi</h5>
+        <p>Ekibinize dahil ettiğiniz iş ortaklarının binary kazançları üzerinden 4 sıraya kadar pay.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">07</div>
+        <h5>XP Bonus Primi</h5>
+        <p>Premium Lite ve Premium iş ortaklarına özel ekip hacmi derinliği ödüllü prim.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">08</div>
+        <h5>Haftalık Havuz Primi</h5>
+        <p>Sistemin haftalık global cirosundan belirli kariyerlere ayrılan havuz payı.</p>
+      </div>
+      <div class="income-item">
+        <div class="ix-num">09</div>
+        <h5>Sonsuzluk Primi</h5>
+        <p>Üst kariyerlere ulaşan iş ortakları için sürdürülebilir, derinlik bazlı gelir kalemi.</p>
+      </div>
+    </div>
+
+    <div class="income-note">
+      <strong>Önemli:</strong> Yukarıdaki kazanç kalemleri sistemin nasıl çalıştığını gösterir; gerçek gelir
+      kişinin ürün satış aktivitesine, ekip performansına ve harcadığı zamana göre değişir. Garanti edilmiş
+      bir kazanç vaadi söz konusu değildir. Detaylı bilgi için resmi sunumu talep edin.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CAREER PATH
+     ============================================ -->
+<section class="career" id="career">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Kariyer Yapısı</div>
+        <h2 class="section-title">11 kademeli <em>gelişim modeli.</em></h2>
+      </div>
+      <p class="lede">
+        Ekip hacmine dayalı ve sürdürülebilir performans kriterleriyle ilerleyen kademeli bir yapı.
+        Puanlar 52 hafta boyunca silinmeden birikir.
+      </p>
+    </div>
+
+    <div class="career-track reveal">
+      <div class="rank rank-1"><div class="rank-name">Jade</div><div class="rank-cv">1.500 CV</div></div>
+      <div class="rank rank-2"><div class="rank-name">Pearl</div><div class="rank-cv">4.500 CV</div></div>
+      <div class="rank rank-3"><div class="rank-name">Sapphire</div><div class="rank-cv">9.000 CV</div></div>
+      <div class="rank rank-4"><div class="rank-name">Ruby</div><div class="rank-cv">18.000 CV</div></div>
+      <div class="rank rank-5"><div class="rank-name">Emerald</div><div class="rank-cv">36.000 CV</div></div>
+      <div class="rank rank-6"><div class="rank-name">Diamond</div><div class="rank-cv">75.000 CV</div></div>
+      <div class="rank rank-7"><div class="rank-name">Blue Diamond</div><div class="rank-cv">150.000 CV</div></div>
+      <div class="rank rank-8"><div class="rank-name">Red Diamond</div><div class="rank-cv">300.000 CV</div></div>
+      <div class="rank rank-9"><div class="rank-name">Black Diamond</div><div class="rank-cv">750.000 CV</div></div>
+      <div class="rank rank-10"><div class="rank-name">Ambassador</div><div class="rank-cv">1.500.000 CV</div></div>
+      <div class="rank rank-11"><div class="rank-name">Crown Ambassador</div><div class="rank-cv">3.000.000 CV</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CERTIFICATIONS
+     ============================================ -->
+<section class="certs">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Sertifikalar &amp; Uyum</div>
+        <h2 class="section-title">Uluslararası <em>standartlar.</em></h2>
+      </div>
+      <p class="lede">
+        Üretim, kalite, çevre, bilgi güvenliği ve iş sağlığı alanlarında bağımsız denetim kuruluşları
+        tarafından belgelendirilmiş ürünler ve operasyonlar.
+      </p>
+    </div>
+
+    <div class="certs-grid">
+      <div class="cert"><div class="cert-name">ISO 9001</div><div class="cert-desc">Kalite Yönetim</div></div>
+      <div class="cert"><div class="cert-name">ISO 14001</div><div class="cert-desc">Çevre Yönetim</div></div>
+      <div class="cert"><div class="cert-name">ISO 27001</div><div class="cert-desc">Bilgi Güvenliği</div></div>
+      <div class="cert"><div class="cert-name">ISO 45001</div><div class="cert-desc">İş Sağlığı</div></div>
+      <div class="cert"><div class="cert-name">Helal</div><div class="cert-desc">Sertifikalı</div></div>
+      <div class="cert"><div class="cert-name">Vegan</div><div class="cert-desc">Sertifikalı</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Sık Sorulan Sorular</div>
+        <h2 class="section-title">Aklınızda olabilecek <em>sorular.</em></h2>
+      </div>
+      <p class="lede">
+        En sık aldığımız soruları topladık. Cevabını bulamadıklarınız için formdan bize ulaşın.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          Xaura Global tam olarak ne yapan bir firma?
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Xaura Global, wellness alanında bilim destekli ürünler üreten ve bu ürünleri bağımsız distribütör
+          ağı (network/MLM modeli) üzerinden dağıtan, Türkiye merkezli uluslararası bir firmadır.
+          Üretim Kore'de yapılıyor, lojistik 18 ülkede yapılanmış durumda.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Başlamak için bir ücret ödemek zorunda mıyım?
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Bayilik aktivasyonu için bir başlangıç seti almanız gerekiyor (Classic 95 USD'den başlıyor).
+          Bu sadece bir "üyelik ücreti" değil; satışını ve kullanımını yapacağınız gerçek ürünleri içeriyor.
+          Bütçenize göre 4 farklı set seçeneği mevcut.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Garanti bir gelir vaat ediyor musunuz?
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Hayır. Hiçbir network firması yasal olarak garanti gelir vaat edemez ve etmemelidir. Kazancınız;
+          ayırdığınız zaman, ürün satışı, ekip kurma performansı ve sistem üzerinde aktiflik durumunuza
+          göre değişir. Bunu net olarak söylüyoruz çünkü gerçek bu.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Bu bir piramit şeması mı?
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Hayır. Piramit şemalarında ürün satışı yoktur; gelir tamamen yeni üye getirmekten oluşur ve
+          yasadışıdır. Xaura'da gerçek ürünler, gerçek müşteriler ve perakende satıştan doğan kâr marjları
+          vardır. Sistem; ürün satışı, ekip büyütme ve performans bazlı 9 farklı kalemden oluşur.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Ne kadar zaman ayırmam gerekir?
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          İsterseniz part-time olarak haftada birkaç saat, isterseniz tam zamanlı çalışabilirsiniz.
+          Birçok başarılı iş ortağımız işi part-time başlatıp, gelir oluşmaya başladıkça tam zamanlıya geçti.
+          Size en uygun model üzerinde birebir konuşacağız.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Form doldurduktan sonra ne oluyor?
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Bilgilerinizi aldıktan sonra 24 saat içinde sizi WhatsApp veya telefon üzerinden arıyoruz.
+          Önce 15-20 dakikalık bir bilgilendirme görüşmesi, ardından isterseniz detaylı bir tanıtım sunumu
+          yapıyoruz. Hiçbir aşamada baskı yapılmaz; karar her zaman size aittir.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="x">x</span>aura Türkiye</div>
+        <p>
+          Xaura Global resmi bağımsız iş ortağı tarafından yönetilen bilgilendirme sayfasıdır.
+          Burada paylaşılan içerik, fırsat hakkında genel bilgi vermek amacıyla hazırlanmıştır.
+        </p>
+      </div>
+      <div>
+        <h6>Bağlantılar</h6>
+        <ul>
+          <li><a href="#why">Neden Xaura</a></li>
+          <li><a href="#products">Ürünler</a></li>
+          <li><a href="#how">Sistem</a></li>
+          <li><a href="#income">Kazanç</a></li>
+          <li><a href="#faq">SSS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Resmi Site</h6>
+        <ul>
+          <li><a href="https://xauraglobal.com" target="_blank" rel="noopener">xauraglobal.com</a></li>
+          <li><a href="https://xauraglobal.com/kurumsal/hakkimizda" target="_blank" rel="noopener">Hakkımızda</a></li>
+          <li><a href="https://xauraglobal.com/kurumsal/sertifikalar" target="_blank" rel="noopener">Sertifikalar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>İletişim</h6>
+        <ul>
+          <li><a href="#hero">Sunum talebi</a></li>
+          <li><a href="https://wa.me/905XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:[email protected]">E-posta</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <strong>Gelir Feragatnamesi:</strong> Bu sayfada gösterilen kariyer kademeleri, prim kalemleri ve örnekler,
+      Xaura Global'in kazanç planının nasıl işlediğini anlatma amacı taşır; gerçek bir gelir vaadi değildir.
+      Bireysel sonuçlar; çalışma süresi, satış aktivitesi, ekip büyüklüğü ve piyasa koşullarına göre kişiden kişiye
+      önemli ölçüde değişir. Bu fırsat; finansal yatırım değil, bağımsız distribütörlük (network/MLM) modelidir.
+      <br><br>
+      <strong>KVKK:</strong> Sayfada toplanan kişisel veriler yalnızca iletişim ve bilgilendirme amacıyla işlenir,
+      üçüncü kişilerle paylaşılmaz. Verilerinizin silinmesini talep etme hakkınız her zaman saklıdır.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Xaura Bağımsız İş Ortağı · Tüm hakları saklıdır.</span>
+      <span>Bu site Xaura Global'in resmi web sitesi değildir.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     FLOATING WHATSAPP
+     ============================================ -->
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp'tan yaz">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/>
+  </svg>
+</a>
+
+<script>
+// ============================================
+// CONFIGURATION — DEĞİŞTİR
+// ============================================
+// Buraya KENDİ WhatsApp numaranı yaz (uluslararası format, başında + ya da 00 yok)
+// Örnek: Türkiye için 905554443322
+const WHATSAPP_NUMBER = "905XXXXXXXXX";  // ← BURAYA KENDİ NUMARANI YAZ
+
+// (Opsiyonel) Formspree veya benzer servis kullanmak istersen URL'i buraya:
+// const FORMSPREE_URL = "https://formspree.io/f/YOURFORMID";
+const FORMSPREE_URL = null;
+
+// ============================================
+// FUNCTIONALITY
+// ============================================
+
+// Set year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// WhatsApp floating button
+document.getElementById('waFloat').href =
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Merhaba, Xaura Global iş fırsatı hakkında bilgi almak istiyorum.')}`;
+
+// Nav scroll behavior
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 30) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}, { passive: true });
+
+// FAQ toggle
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+reveals.forEach(el => io.observe(el));
+
+// Form submit — WhatsApp'a yönlendirir + isterseniz Formspree'ye de gönderir
+function submitLead(e) {
+  e.preventDefault();
+
+  const submitBtn = document.getElementById('submitBtn');
+  const status = document.getElementById('formStatus');
+
+  // Disable button
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = 'Gönderiliyor…';
+
+  // Collect data — message field is optional / may not exist in compact form
+  const messageEl = document.getElementById('message');
+  const data = {
+    firstName: document.getElementById('firstName').value.trim(),
+    lastName:  document.getElementById('lastName').value.trim(),
+    phone:     document.getElementById('phone').value.trim(),
+    city:      document.getElementById('city').value.trim(),
+    goal:      document.getElementById('goal').value,
+    message:   messageEl ? messageEl.value.trim() : '',
+  };
+
+  // Build WhatsApp message
+  const waMessage =
+`🌿 *Yeni Xaura Lead*
+
+👤 İsim: ${data.firstName} ${data.lastName}
+📞 Telefon: ${data.phone}
+📍 Şehir: ${data.city}
+🎯 İlgi: ${data.goal}
+${data.message ? `\n💬 Not: ${data.message}` : ''}
+
+—
+Xaura Landing Page üzerinden gönderildi.`;
+
+  // Optional: Send to Formspree first (background)
+  if (FORMSPREE_URL) {
+    fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(err => console.warn('Formspree error:', err));
+  }
+
+  // Open WhatsApp with prefilled message
+  setTimeout(() => {
+    const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
+    window.open(waURL, '_blank');
+
+    status.innerHTML = '✓ WhatsApp\'a yönlendirildiniz. Görüşmek üzere!';
+    status.style.color = '#16a34a';
+
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Sunumu Talep Et <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+    document.getElementById('leadForm').reset();
+  }, 400);
+
+  return false;
+}
+</script>
+
+</body>
+</html>
